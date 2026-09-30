@@ -1,0 +1,147 @@
+:root {
+    --primary: #21476d;
+    --primary-dark: #163653;
+    --accent: #1a3f61;
+
+    --ink: #204972;
+    --muted: #52708d;
+
+    --bg: #0c203d;
+    --card: #ffffff;
+    --card-soft: rgba(255, 255, 255, 0.88);
+
+    --line: #cbd2ce;
+
+    --text-light: #ffffff;
+    --text-light-muted: #c8d8e8;
+
+    --overlay: rgba(0, 0, 0, 0.35);
+    --shadow: rgba(0, 0, 0, 0.05);
+
+    --gradient-start: #315f8c;
+    --gradient-middle: #10294a;
+    --gradient-end: #071525;
+
+    --radius: 10px;
+    --space: 1rem;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    color: var(--ink);
+    background-color: var(--bg);
+    background-image: url("../images/paper-texture.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+
+a { color: inherit; }
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.2rem 4rem;
+    background: var(--bg);
+}
+
+
+.brand {
+    color: var(--text-light-muted);
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+.brand:hover {
+    color: var(--text-light);
+}
+
+
+.site-menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.site-menu a {
+    display: block;
+    color: var(--text-light-muted);
+    font-size: 0.95rem;
+    text-decoration: none;
+    padding-bottom: 0.25rem;
+}
+
+
+.site-menu a:hover,
+.site-menu a[aria-current="page"] {
+    color: var(--text-light);
+    border-bottom: 2px solid var(--text-light);
+}
+
+
+.contact-button {
+    padding: 0.45rem 1rem;
+    border: 1px solid var(--text-light-muted);
+    border-radius: 20px;
+    color: var(--text-light-muted);
+    text-decoration: none;
+}
+
+
+.contact-button:hover {
+    background: var(--primary);
+    color: white;
+}
+
+
+.button {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.button.primary {
+    background: var(--primary); color: white; }
+
+.button.primary:hover { background: var(--primary-dark);}
+
+.site-footer { 
+    margin-top: 2rem; 
+    padding: 1.5rem 3rem;
+    border-top: 1px solid var(--line); 
+    color: var(--muted); 
+    font-size: 0.85rem; 
+    text-align: center; }
+
+@media (max-width: 48rem) {
+    .site-header { flex-direction: column; padding: 1rem; }
+    .site-menu ul { justify-content: center; gap: 1rem; }
+}
